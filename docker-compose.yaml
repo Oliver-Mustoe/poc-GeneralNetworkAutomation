@@ -19,7 +19,7 @@ services:
    networks:
      - forgejo
    volumes:
-     - /opt/forgejo:/data
+     - /opt/forgejo/data:/data
      - /etc/timezone:/etc/timezone:ro
      - /etc/localtime:/etc/localtime:ro
    ports:
@@ -38,4 +38,4 @@ services:
    networks:
      - forgejo
    volumes:
-     - /opt/postgres:/var/lib/postgresql/data
+     - /opt/forgejo/postgres:/var/lib/postgresql/data

@@ -20,7 +20,6 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 echo "Creating needed forgejo volumes"
-mkdir -p /opt/forgejo
+sudo mkdir -p /opt/forgejo/data
+sudo mkdir -p /opt/forgejo/postgres
 sudo chown -R 1000:1000 /opt/forgejo
-mkdir -p /opt/postgres
-sudo chown -R 1000:1000 /opt/postgres
