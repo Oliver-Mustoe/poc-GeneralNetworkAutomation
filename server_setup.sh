@@ -23,3 +23,4 @@ echo "Creating needed forgejo volumes"
 sudo mkdir -p /opt/forgejo/data
 sudo mkdir -p /opt/forgejo/postgres
 sudo chown -R 1000:1000 /opt/forgejo
+sudo chmod -R 655 /opt/forgejo 
