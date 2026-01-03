@@ -22,5 +22,5 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 echo "Creating needed forgejo volumes"
 sudo mkdir -p /opt/forgejo/data
 sudo mkdir -p /opt/forgejo/postgres
+sudo mkdir -p /opt/forgejo/conf
 sudo chown -R 1000:1000 /opt/forgejo
-sudo chmod -R 655 /opt/forgejo 
