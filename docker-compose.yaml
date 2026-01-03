@@ -36,8 +36,8 @@ services:
    restart: always
    environment:
      - POSTGRES_USER=forgejo
-     - POSTGRES_PASSWORD=forgejo
-     - POSTGRES_DB=${FORGEJO_DB_PASSWORD}
+     - POSTGRES_DB=forgejo
+     - POSTGRES_PASSWORD=${FORGEJO_DB_PASSWORD}
    networks:
      - forgejo
    volumes:
