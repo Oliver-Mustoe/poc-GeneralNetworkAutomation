@@ -4,7 +4,7 @@ networks:
 
 services:
   server:
-   image: codeberg.org/forgejo/forgejo:13
+   image: codeberg.org/opt/forgejo/opt/forgejo:13
    container_name: forgejo
    user: 1000:1000
    environment:
@@ -19,7 +19,7 @@ services:
    networks:
      - forgejo
    volumes:
-     - /forgejo:/data
+     - /opt/forgejo:/data
      - /etc/timezone:/etc/timezone:ro
      - /etc/localtime:/etc/localtime:ro
    ports:
@@ -38,4 +38,4 @@ services:
    networks:
      - forgejo
    volumes:
-     - /postgres:/var/lib/postgresql/data
+     - /opt/postgres:/var/lib/postgresql/data
