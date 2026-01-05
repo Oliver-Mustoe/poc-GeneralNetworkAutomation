@@ -8,3 +8,6 @@ TODO:
 - SSL
 - A runner
 - A action
+
+ Possible sources:
+ - https://helgeklein.com/blog/upgrading-postgresql-in-docker-container/
