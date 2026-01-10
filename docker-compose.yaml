@@ -3,10 +3,13 @@ networks:
     external: false
 
 services:
+  # Need to add persistance here for the data, add to the server setup volumes
   reverse-proxy:
    image: caddy:2.11-alpine
    restart: unless-stopped
    container_name: caddy
+   networks:
+     - forgejo
    ports:
      - "80:80"
      - "443:443"
