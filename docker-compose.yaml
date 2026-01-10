@@ -1,5 +1,8 @@
+# Need to add another network for the caddy to forgejo connection thats not
 networks:
   forgejo:
+    external: false
+  proxy:
     external: false
 
 services:
@@ -9,7 +12,7 @@ services:
    restart: unless-stopped
    container_name: caddy
    networks:
-     - forgejo
+     - proxy
    ports:
      - "80:80"
      - "443:443"
@@ -33,6 +36,7 @@ services:
    restart: always
    networks:
      - forgejo
+     - proxy
    volumes:
      #     - /opt/forgejo/data:/data
      - /opt/forgejo/data:/var/lib/gitea
