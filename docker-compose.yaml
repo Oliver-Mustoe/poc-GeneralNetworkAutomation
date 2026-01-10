@@ -3,7 +3,17 @@ networks:
     external: false
 
 services:
-  server:
+  reverse-proxy:
+    image: caddy:2.11-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+
+  git:
     #image: codeberg.org/forgejo/forgejo:13
    image: codeberg.org/forgejo/forgejo:13-rootless
    container_name: forgejo
